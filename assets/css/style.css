@@ -1,0 +1,401 @@
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+}
+
+.body {
+  margin: 0;
+  font-family: "Roboto Slab", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  background-color: #fff;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+}
+
+
+.navbar-brand{
+	color: #FFA500!important;
+	letter-spacing: 4px;
+}
+.navbar-nav{
+	margin-left: 22px;
+	font-style: Monospace;
+}
+
+.nav-link{
+	letter-spacing: 4px;
+	color: white!important;
+	font-family: "Montserra";
+}
+.nav-link:hover {
+  color: #FFA500!important;
+}
+
+.btn{
+	position: relative;
+	display: inline-block;
+	padding: 15px 30px;
+	color: #2196f3;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	text-decoration: none;
+	font-size: 24px;
+	overflow: hidden;
+	transition: 0.2s;
+}
+.btn:hover{
+	color: white;
+	background: black;
+	box-shadow: 0 0 10px #2196f3, 0 0 40px #2196f3, 0 0 80px #2196f3;
+	transition-delay: 1s;
+}
+
+.btn span{
+	position: absolute;
+	display: block;
+}
+
+.btn span:nth-child(1)
+{
+	top: 0;
+	left: -100%;
+	width: 100%;
+	height: 2px;
+	background: linear-gradient(90deg,transparent,#2196f3);
+}
+
+.btn:hover span:nth-child(1)
+{
+	left: 100%;
+	transition: 1s;	
+}
+
+.btn span:nth-child(3)
+{
+	bottom: 0;
+	right: -100%;
+	width: 100%;
+	height: 2px;
+	background: linear-gradient(270deg,transparent,#2196f3);
+}
+
+.btn:hover span:nth-child(3)
+{
+	right: 100%;
+	transition: 1s;
+	transition-delay: 0.5s;
+}
+
+.btn span:nth-child(2)
+{
+	top: -100%;
+	right: 0;
+	width: 2px;
+	height: 100%;
+	background: linear-gradient(180deg,transparent,#2196f3);
+}
+
+.btn:hover span:nth-child(2)
+{
+	top: 100%;
+	transition: 1s;
+	transition-delay: 0.25s;
+}
+
+.btn span:nth-child(4)
+{
+	bottom: -100%;
+	left: 0;
+	width: 2px;
+	height: 100%;
+	background: linear-gradient(360deg,transparent,#2196f3);
+}
+
+.btn:hover span:nth-child(4)
+{
+	bottom: 100%;
+	transition: 1s;
+	transition-delay: 0.75s;
+}
+
+
+.container-fluid >h2{
+	text-align: center;
+	padding-top: 27%;
+	color: white;
+	font-family: 'Cormorant Infant', serif;
+
+}
+.container-fluid >h3 {
+	text-align: center;
+	margin-top: 18px;
+	margin-bottom: 20px;
+	color: white;
+    font-family: 'Zen Tokyo Zoo', cursive;
+}
+.area{
+	background-color: white;
+}
+.section-heading{
+	letter-spacing: 4px;
+	font-family: 'Cormorant Infant', serif;
+
+}
+.fa-stack{
+	align-items: center;
+}
+
+
+.card {
+	text-align: center;
+	box-shadow: 1px 5px 20px red;
+}
+
+.banner {
+	background-image:url('../images/bg.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	background-color: red;
+	background-blend-mode: darken;
+}
+.col-md-4{
+margin-top: 40px;
+padding-left: 35px;
+}
+
+.divarrow{
+	padding: 10px 15px;
+	position: relative;
+}
+
+.divarrow h2{
+	font-size: 18px;
+	margin: 10px 10px;
+	text-align: left;
+	position: relative;
+}
+.divarrow .inarrow::before{
+	position: absolute;
+	content: ">";
+	font-size: 28px;
+	color: orange;
+	left: -30px;
+	top: -10px;
+}
+
+
+ .card-list {
+    display: flex;
+    padding-left: 150px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    overflow-x: scroll;
+}
+
+ .card-list::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+} 
+ .card-list::-webkit-scrollbar-thumb {
+    background: #201c29;
+    border-radius: 10px;
+    box-shadow: inset 2px 2px 2px hsla(0,0%,100%,.25), inset -2px -2px 2px rgb(0,0,0,.25);
+} 
+
+.card-list::-webkit-scrollbar-track {
+    background: linear-gradient(90deg,#201c29,#201c29 1px,#17141d 0,#17141d);
+}
+.card {
+    height: 450px;
+    width: 200px;
+    min-width: 250px;
+    padding: 1.5rem;
+    border-radius: 16px;
+    background: #17141d;
+    box-shadow: -1rem 0 3rem #000;
+    display: flex;
+    flex-direction: column;
+    transition: .2s;
+    margin: 0;
+    scroll-snap-align: start;
+    clear: both;
+    position: relative;
+}
+
+.card:focus-within~.card, .card:hover~.card {
+    transform: translateX(130px);
+}
+
+#skills .card:hover {
+    transform: translateY(-1rem);
+}
+
+.card:not(:first-child) {
+    margin-left: -100px;
+}
+
+.card-header {
+    margin-bottom: auto;
+}
+.author-name{
+	color: ADD8E6;
+}
+
+.card-header h2 {
+    font-size: 20px;
+    margin: .25rem 0 auto;
+    text-decoration: none;
+    color: inherit;
+    border: 0;
+    display: inline-block;
+    cursor: pointer;
+    background: linear-gradient(90deg,#ff8a00,#e52e71);
+}
+
+/* .card-header h2:hover {
+   
+    text-shadow: none;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+} */
+
+.card-author {
+    margin: 3rem 0 0;
+    display: grid;
+    grid-template-columns: 75px 1fr;
+    align-items: center;
+    position: relative;
+}
+
+.author-avatar {
+    grid-area: auto;
+    align-self: start;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.author-avatar img {
+    width: 40px;
+    height:40px;
+    border-radius: 50%;
+    filter:(100%);
+    display: block;
+    overflow: hidden;
+    margin: 16px 10px;
+
+}
+.author-name {
+    grid-area: auto;
+    box-sizing: border-box;
+}
+
+.author-name-prefix {
+    font-style: normal;
+    font-weight: 700;
+    color: #7a7a8c;
+}
+
+.half-circle {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 48px;
+    fill: none;
+    stroke: #ff8a00;
+    stroke-width: 8;
+    stroke-linecap: round;
+    pointer-events: none;
+}
+
+.tags {
+    margin: 1rem 0 2rem;
+    padding: .5rem 0 1rem;
+    line-height: 2;
+    margin-bottom: 0;
+}
+
+.box{
+	display: flex;
+	justify-content: center;
+	padding-top: 20px;
+}
+.col-sm-4{
+	display: flex;
+	justify-content: center;
+}
+.row{
+	display: flex;
+	justify-content: center;
+}
+.heading{
+	display: grid;
+	justify-content: center;
+	letter-spacing: 3px;
+	font-family: 'Cormorant Infant', serif;
+}
+.box{
+	padding-top: 20px;
+	display:flex;
+	justify-content: center;
+}
+.cc >h4{
+	align-content: center;
+	display: flex;
+	justify-content: center;
+	color: black!important;
+}
+
+.mail{
+	display: flex;
+	justify-content: center;
+}
+
+.box >a{
+    font-size: 18px;
+    display: inline-block;
+    background-color: black;
+    line-height: 6px;
+    margin: 0 8px;
+    transition: 0.3s;
+    padding: 14px;
+    border-radius: 50px;
+    border: 1px solid black;
+    color: #FFA500!important;
+}
+
+.section4 {
+	font-family: 'Cormorant Infant', serif;
+	text-align: center;
+	text-shadow: 90%;;
+}
+.gotopbtn{
+	position: fixed;
+	width: 50px;
+	height: 50px;
+	padding-top: 15px;
+	background: linear-gradient(90deg,#ff8a00,#e52e71);
+	bottom: 30px;
+	right:  50px;
+	text-decoration:none;
+	text-align: center;
+	line-height: 50px;
+	border-radius: 30px;
+}
+.arrow-up{
+   size:30px;
+}
+.fa-arrow-up:before {
+    content: "\f062";
+    color: black;
+    size: 18px;
+}
